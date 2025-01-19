@@ -1,10 +1,10 @@
-public class forward{
-  private int pac, pas, sho;
-  public forward(String n, String t, int d, int p, int s){
+public class forward extends player{
+  private int speed, pas, sho;
+  public forward(String n, String t, int pac, int p, int s){
     super(n, t);
-    def = d;
+    pac = p;
     pas = p;
-    sho = s;
+    speed = s;
   }
   public getsho(){
     return this.sho;
@@ -12,7 +12,8 @@ public class forward{
   public getpas(){
     return this.pas;
   }
-  public getdef(){
-    return this.getdef;
+  public getpac(){
+    return this.getpac;
   }
+  
 }
