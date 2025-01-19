@@ -1,4 +1,4 @@
-public class defender{
+public class defender extends player{
   private int def, pas, sho;
   public defender(String n, String t, int d, int p, int s){
     super(n, t);
