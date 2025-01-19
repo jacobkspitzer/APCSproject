@@ -12,8 +12,12 @@ public class main{
     barcamids[4] = new midfield("Pedri", "Barca", 83, 83, 83);
 
     barcafors[0] = new forward("Messi", "Barca", 99, 99, 99);
-    barcafors[1] = new forward("Neymar", "Barca", 95, 80, 85);
-    barcafors[2] = new forward("Ronaldinho", "Barca", 95, 80, 85);
+    barcafors[1] = new forward("Neymar", "Barca", 80, 85, 95);
+    barcafors[2] = new forward("Ronaldinho", "Barca", 80, 85, 95);
+    barcafors[3] = new forward("Suarez", "Barca", 90, 85, 85);
+    barcafors[4] = new forward("Lewandowski", "Barca, 95, 80, 85);
+
+    
     
     
       
