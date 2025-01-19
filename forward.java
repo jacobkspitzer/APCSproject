@@ -1,1 +1,18 @@
-
+public class forward{
+  private int pac, pas, sho;
+  public forward(String n, String t, int d, int p, int s){
+    super(n, t);
+    def = d;
+    pas = p;
+    sho = s;
+  }
+  public getsho(){
+    return this.sho;
+  }
+  public getpas(){
+    return this.pas;
+  }
+  public getdef(){
+    return this.getdef;
+  }
+}
