@@ -1,8 +1,8 @@
 public class forward extends player{
   private int speed, pas, sho;
-  public forward(String n, String t, int pac, int p, int s){
+  public forward(String n, String t, int sh, int p, int s){
     super(n, t);
-    pac = p;
+    sho = sh;
     pas = p;
     speed = s;
   }
