@@ -1,6 +1,6 @@
 public class defender{
   private int def, pas, sho;
-  public defender(String n, Strnig t, int d, int p, int s){
+  public defender(String n, String t, int d, int p, int s){
     super(n, t);
     def = d;
     pas = p;
