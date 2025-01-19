@@ -2,9 +2,9 @@ public class player{
   private String name;
   private String team;
   private boolean playing;
-  public player{
-    this.name  = name;
-    this.team = team;
+  public player(String n, String t){
+    this.name  = n;
+    this.team = t;
   }
   public String toString(){
     return this.name;
@@ -13,3 +13,4 @@ public class player{
     return this.team
   }
   
+}
