@@ -1,10 +1,10 @@
 public class midfield extends player{
-  private int speed, pas, sho;
-  public midfield(String n, String t, int pac, int p, int s){
+  private int sho, pas, def;
+  public midfield(String n, String t, int s, int p, int d){
     super(n, t);
-    pac = p;
+    sho = s;
     pas = p;
-    speed = s;
+    def = d
   }
   public getsho(){
     return this.sho;
