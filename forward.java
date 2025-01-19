@@ -13,7 +13,7 @@ public class forward extends player{
     return this.pas;
   }
   public getpac(){
-    return this.getpac;
+    return this.speed;
   }
   
 }
