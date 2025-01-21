@@ -1,10 +1,7 @@
 import java.util.Scanner;
 import java.util.Random;
 
-public class main{
-  public static int getRandomNumber(int min, int max) {
-    return (int) ((Math.random() * (max - min)) + min);
-  }
+
   public static void main(String[] args){
     barcamids = new midfield[5];
     barcafors = new forward[5];
@@ -84,6 +81,16 @@ public class main{
     for(int x = 0; x ++; x<4){
       madriddef += madridteam[x].getdef();
     }
+
+    int barcaattack = 0;
+    for(player p in barcateam){
+      barcaattack += p.getsho();
+    }
+    
+    int madridattack = 0;
+    for(player p in madridteam){
+      madridattack += p.getsho();
+    }
     
     System.out.println("The next day, at the Camp Nou...");
     Thread.sleep(1000);
@@ -91,19 +98,86 @@ public class main{
     
 
     System.out.println("Commentator: On a warm night here in Catalonia, the very finest footballers the world has to offer have assembled to play out this edition of the greatest rivalry in sporting history. 
-      This is El Clasico, a battle not between two sets of footballers, but a battle between two footballing traditions, between two cities, and between two cultures. The intricate, passing football of barcalona,
+      This is El Clasico, a battle not between two sets of footballers, but a battle between two footballing traditions, between two cities, and between two cultures. The intricate, passing football of barcelona,
       against the lethal rapid counter attacks of Real Madrid. The home grown talents of Barca, against the Galactico Superstars of Madrid. The humble Messi against the arrogant Ronaldo. The stakes could not be
       higher tonight. Only time will tell which side will emerge triumphant")
       Thread.sleep(5000);
-    System.out.println("0': Barcelona kick off and we're underway. They have a spell of early possesion but lose it trying to go long looking for + " barcaplayers[6] + " Madrid tries to break quickly with " + 
-                      madridplayers[5] + "but halted in their tracks by" + barcaplayers[3] + ". Both sides look promising in the opening exchanges, hopefully the match continues like this.);
+    System.out.println("0': Barcelona kick off and we're underway. They have a spell of early possesion but lose it trying to go long looking for + " barcaplayers[5] + " Madrid tries to break quickly with " + 
+                      madridplayers[5] + "but halted in their tracks by" + barcaplayers[3] + ". Both sides look promising in the opening exchanges, hopefully the match continues like this.");
 
-    for(int x = 0; x <= 8; x ++){
+    Random random = new Random();
+    
+    for(int x = 0; x <= 17; x ++){
       minute = 5*x + getRandomNumber(0, 4);
-      String message = 
-      if( getRandomNumber(0, barcapossesion+madridpossesion) <= barcapossesion){
-        if (getRandomNumber(0, 100) <= 66){
-          
+      String message = minute.toString() + "': ";
+      if( random.nextInt(barcapossesion+madridpossesion) <= barcapossesion){
+        if (random.nextInt(100) <= 20){
+  
+            barcascore += 1;
+            String [] possiblemessages = new String[]{
+             "" +  barcateam[1] + "slides it through for Messi, he chips the keeper, MESSIIIIIIIIIIIIIIIIIIIIIIIIIIIII. The man you can always count on to create the magic,
+            and he's done it again for Barca today. What a brilliant goal.",
+              
+              barcateam[3] + "has found space out wide, takes on his man, beats him, plays it into the box for " + barcateam[4] + " and SCORES GOAAAAAAAAAAAAAAAAAAALLLLLLLLLLLLLLLLLLLLLL FOR BARCELONA",
+              
+              "Barcelona comfortable just circulating the ball slowly advancing. " + barcateam[0] + " plays it into midfield for " + barcateam[3] + " who finds" + barcateam[2] + " back to" + barcateam[3] + "
+              who gets " + barcateam[4] " in space. HE DOESN'T MISS THOSE, WHAT A GOAL! CLASSIC TIKI TAKA, ABOSOLUTELY MAJESTIC TO WATCH!",
+
+              "Messi drives through midfield, past one, past two, past THREE, PAST FOUR ALONE WITH CASILLAS. MESSI SHOOTS MESSIIIIIIIII! UNBELIEVABLE, BEYOND SUPERHUMAN, WHO ELSE BUT HIM COULD DO THAT! SURELY A GOAL
+              THAT WILL GO DOWN IN HISTORY AS ONE OF THE GREATEST EVER SCORED"
+
+              " " + barcateam[2] + "will try for distance... AND SCORE. HE'S ABSOLUTELY BLASTED THAT, NO HOPE FOR CASSILLAS, AND WHAT A GOAL"
+
+              
+            int randomIndex = random.nextInt(possiblemessages.length);
+            message += possiblemessages[randomIndex];
+            message += ". The score is now Barca - " + barcascore.toString + ", Madrid - " + madridscore.toString()
+            System.out.println(Message);
+          } 
+          else{
+            System.out.println("Barca smother madrid with their possesion, but fail to create significant chances");
+        
+          }
+
+        
+        }
+        else{
+          if (random.nextInt(100) <= 20){
+  
+            madridscore += 1;
+                String [] possiblemessages = new String[]{
+             "" +  madridteam[1] + "slides it through for Ronaldo, goes around the keeper with his stepovers, RONALDOOOOOOOOOOO. The man you can always count on to bring the goals,
+            and he's done it again for Madrid today. What a brilliant goal.",
+              
+              madridteam[3] + "has found space out wide, takes on his man, beats him, plays it into the box for " + madridteam[5] + " and SCORES GOAAAAAAAAAAAAAAAAAAALLLLLLLLLLLLLLLLLLLLLL FOR BARCELONA",
+              
+              "Madrid breaking quickly with " + madridteam[0] + " plays it into midfield for " + madridteam[3] + " who finds" + madridteam[2] + " back to" + madridteam[3] + "
+              who gets " + madridteam[5] " in space. HE DOESN'T MISS THOSE, WHAT A GOAL! RAPID, END TO END COUNTERATTACK, THERE'S NO STOPPING THAT",
+
+              "" + madridteam[5] + " IS THROUGH ON GOAL, HES TACKLED FROM BEHING AND HE STAYS DOWN. ITS A FREEKICK! Ronaldo to take, surely not in his scoring range, but he's surprised us before. 
+                  RONALDOOOOOOOOOOOOOOOOOOOOOOOOOOOO. ITS A MOMENT OF ABSOLUTE MAGIC FROM HIM HE'S BLASTED IT WITH NO HOPE OF A SAVE FROM TER STEGEN. THE POWER, THE PLACEMENT SURELY ON PAR WITH
+                  THE ROBERTO CARLOS GOAL. A MOMENT TO REMEMBER FOR MADRID FANS AROUND THE WORLD"
+
+              " " + madridteam[2] + "will try from distance... AND SCORE. HE'S ABSOLUTELY BLASTED THAT, NO HOPE FOR TER STEGEN, AND WHAT A GOAL"
+
+              
+                int randomIndex = random.nextInt(possiblemessages.length);
+                message += possiblemessages[randomIndex];
+                message += ". The score is now Barca - " + barcascore.toString + ", Madrid - " + madridscore.toString()
+                System.out.println(Message);
+                } 
+              else{
+                System.out.println("Madrid look to break with pace, but thwarted again");
+        
+              }
+              Thread.sleep(5000)
+            }
+          if (barcagoals == madridgoals){
+            System.out.println("90': Messi drives into the box, one last chance to score here. Ooh it's a nasty challenge from  Ramos and Messi's down holding his leg. Will it be a penalty? IT WILL. Messi steps up
+              to take. Can he complete a treble that will be remembered for decades? HE CAAAAN MESIIIIIIIII HAS DONE IT FOR BARCA, HE ALWAYS DOES, WHAT A MOMENT
+          }
+
+        
         }
       }
     }
