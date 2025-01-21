@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Random;
 
-
+public class main{
   public static void main(String[] args){
     barcamids = new midfield[5];
     barcafors = new forward[5];
@@ -114,26 +114,14 @@ import java.util.Random;
         if (random.nextInt(100) <= 20){
   
             barcascore += 1;
-            String [] possiblemessages = new String[]{
-             "" +  barcateam[1] + "slides it through for Messi, he chips the keeper, MESSIIIIIIIIIIIIIIIIIIIIIIIIIIIII. The man you can always count on to create the magic,
-            and he's done it again for Barca today. What a brilliant goal.",
-              
-              barcateam[3] + "has found space out wide, takes on his man, beats him, plays it into the box for " + barcateam[4] + " and SCORES GOAAAAAAAAAAAAAAAAAAALLLLLLLLLLLLLLLLLLLLLL FOR BARCELONA",
-              
-              "Barcelona comfortable just circulating the ball slowly advancing. " + barcateam[0] + " plays it into midfield for " + barcateam[3] + " who finds" + barcateam[2] + " back to" + barcateam[3] + "
-              who gets " + barcateam[4] " in space. HE DOESN'T MISS THOSE, WHAT A GOAL! CLASSIC TIKI TAKA, ABOSOLUTELY MAJESTIC TO WATCH!",
-
-              "Messi drives through midfield, past one, past two, past THREE, PAST FOUR ALONE WITH CASILLAS. MESSI SHOOTS MESSIIIIIIIII! UNBELIEVABLE, BEYOND SUPERHUMAN, WHO ELSE BUT HIM COULD DO THAT! SURELY A GOAL
-              THAT WILL GO DOWN IN HISTORY AS ONE OF THE GREATEST EVER SCORED"
-
-              " " + barcateam[2] + "will try for distance... AND SCORE. HE'S ABSOLUTELY BLASTED THAT, NO HOPE FOR CASSILLAS, AND WHAT A GOAL"
+            String [] possiblemessages = new String[]{"" +  barcateam[1] + "slides it through for Messi, he chips the keeper, MESSIIIIIIIIIIIIIIIIIIIIIIIIIIIII. The man you can always count on to create the magic, and he's done it again for Barca today. What a brilliant goal.", barcateam[3] + "has found space out wide, takes on his man, beats him, plays it into the box for " + barcateam[4] + " and SCORES GOAAAAAAAAAAAAAAAAAAALLLLLLLLLLLLLLLLLLLLLL FOR BARCELONA", "Barcelona comfortable just circulating the ball slowly advancing. " + barcateam[0] + " plays it into midfield for " + barcateam[3] + " who finds " + barcateam[2] + " back to " + barcateam[3] + "who gets " + barcateam[4] " in space. HE DOESN'T MISS THOSE, WHAT A GOAL! CLASSIC TIKI TAKA, ABOSOLUTELY MAJESTIC TO WATCH!", "Messi drives through midfield, past one, past two, past THREE, PAST FOUR ALONE WITH CASILLAS. MESSI SHOOTS MESSIIIIIIIII! UNBELIEVABLE, BEYOND SUPERHUMAN, WHO ELSE BUT HIM COULD DO THAT! SURELY A GOAL THAT WILL GO DOWN IN HISTORY AS ONE OF THE GREATEST EVER SCORED", " " + barcateam[2] + "will try for distance... AND SCORE. HE'S ABSOLUTELY BLASTED THAT, NO HOPE FOR CASSILLAS, AND WHAT A GOAL"}
 
               
             int randomIndex = random.nextInt(possiblemessages.length);
             message += possiblemessages[randomIndex];
             message += ". The score is now Barca - " + barcascore.toString + ", Madrid - " + madridscore.toString()
             System.out.println(Message);
-          } 
+          
           else{
             System.out.println("Barca smother madrid with their possesion, but fail to create significant chances");
         
@@ -145,49 +133,29 @@ import java.util.Random;
           if (random.nextInt(100) <= 20){
   
             madridscore += 1;
-                String [] possiblemessages = new String[]{
-             "" +  madridteam[1] + "slides it through for Ronaldo, goes around the keeper with his stepovers, RONALDOOOOOOOOOOO. The man you can always count on to bring the goals,
-            and he's done it again for Madrid today. What a brilliant goal.",
-              
-              madridteam[3] + "has found space out wide, takes on his man, beats him, plays it into the box for " + madridteam[5] + " and SCORES GOAAAAAAAAAAAAAAAAAAALLLLLLLLLLLLLLLLLLLLLL FOR BARCELONA",
-              
-              "Madrid breaking quickly with " + madridteam[0] + " plays it into midfield for " + madridteam[3] + " who finds" + madridteam[2] + " back to" + madridteam[3] + "
-              who gets " + madridteam[5] " in space. HE DOESN'T MISS THOSE, WHAT A GOAL! RAPID, END TO END COUNTERATTACK, THERE'S NO STOPPING THAT",
-
-              "" + madridteam[5] + " IS THROUGH ON GOAL, HES TACKLED FROM BEHING AND HE STAYS DOWN. ITS A FREEKICK! Ronaldo to take, surely not in his scoring range, but he's surprised us before. 
-                  RONALDOOOOOOOOOOOOOOOOOOOOOOOOOOOO. ITS A MOMENT OF ABSOLUTE MAGIC FROM HIM HE'S BLASTED IT WITH NO HOPE OF A SAVE FROM TER STEGEN. THE POWER, THE PLACEMENT SURELY ON PAR WITH
-                  THE ROBERTO CARLOS GOAL. A MOMENT TO REMEMBER FOR MADRID FANS AROUND THE WORLD"
-
-              " " + madridteam[2] + "will try from distance... AND SCORE. HE'S ABSOLUTELY BLASTED THAT, NO HOPE FOR TER STEGEN, AND WHAT A GOAL"
+                String[] possiblemessages = new String[]{"" +  madridteam[1] + "slides it through for Ronaldo, goes around the keeper with his stepovers, RONALDOOOOOOOOOOO. The man you can always count on to bring the goals, and he's done it again for Madrid today. What a brilliant goal.", madridteam[3] + "has found space out wide, takes on his man, beats him, plays it into the box for " + madridteam[5] + " and SCORES GOAAAAAAAAAAAAAAAAAAALLLLLLLLLLLLLLLLLLLLLL FOR Madrid", "Madrid breaking quickly with " + madridteam[0] + " plays it into midfield for " + madridteam[3] + " who finds" + madridteam[2] + " back to" + madridteam[3] + "who gets " + madridteam[5] " in space. HE DOESN'T MISS THOSE, WHAT A GOAL! RAPID, END TO END COUNTERATTACK, THERE'S NO STOPPING THAT", "" + madridteam[5] + " IS THROUGH ON GOAL, HES TACKLED FROM BEHING AND HE STAYS DOWN. ITS A FREEKICK! Ronaldo to take, surely not in his scoring range, but he's surprised us before. RONALDOOOOOOOOOOOOOOOOOOOOOOOOOOOO. ITS A MOMENT OF ABSOLUTE MAGIC FROM HIM HE'S BLASTED IT WITH NO HOPE OF A SAVE FROM TER STEGEN. THE POWER, THE PLACEMENT SURELY ON PAR WITH THE ROBERTO CARLOS GOAL. A MOMENT TO REMEMBER FOR MADRID FANS AROUND THE WORLD", " " + madridteam[2] + "will try from distance... AND SCORE. HE'S ABSOLUTELY BLASTED THAT, NO HOPE FOR TER STEGEN, AND WHAT A GOAL"}
 
               
                 int randomIndex = random.nextInt(possiblemessages.length);
                 message += possiblemessages[randomIndex];
                 message += ". The score is now Barca - " + barcascore.toString + ", Madrid - " + madridscore.toString()
                 System.out.println(Message);
-                } 
+                 
               else{
                 System.out.println("Madrid look to break with pace, but thwarted again");
         
               }
               Thread.sleep(5000)
-            }
-          if (barcagoals == madridgoals){
-            System.out.println("90': Messi drives into the box, one last chance to score here. Ooh it's a nasty challenge from  Ramos and Messi's down holding his leg. Will it be a penalty? IT WILL. Messi steps up
-              to take. Can he complete a treble that will be remembered for decades? HE CAAAAN MESIIIIIIIII HAS DONE IT FOR BARCA, HE ALWAYS DOES, WHAT A MOMENT
           }
-
-        
-        }
+          if (barcagoals == madridgoals){
+            System.out.println("90': Messi drives into the box, one last chance to score here. Ooh it's a nasty challenge from  Ramos and Messi's down holding his leg. Will it be a penalty? IT WILL. Messi steps up to take. Can he complete a treble that will be remembered for decades? HE CAAAAN MESIIIIIIIII HAS DONE IT FOR BARCA, HE ALWAYS DOES, WHAT A MOMENT. Final whistle blows and Barca have their treble");
+          }
+          if (barcagoals> madridgoals){
+            System.out.println("90': THE FINAL WHISTLE GOES AND BARCALONA HAVE DONE IT. REAL MADRID BROKEN AND DEFEATED AS BARCA REJOICE. WHAT A NIGHT FOR THE CATALONIANS");
+          }
+          if (madridgoals > barcagoals){
+            System.out.println("90':The final whistle goes, and Madrid have toppled the seemingly unstoppable Barca side. Beaten in preseason. Lost both matches in La Liga. Beaten in the Copa del Rey, BUT VICTORIOUS IN THE CHAMPIONS LEAGUE. WHAT A NIGHT FOR THEM!");
+          }    
       }
-    }
-      
-    
-    
-    
-    
-    
-    
-      
-  }
 }
+
