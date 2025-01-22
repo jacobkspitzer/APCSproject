@@ -1,3 +1,4 @@
+
 public class player{
   private String name;
   private String team;
@@ -10,7 +11,7 @@ public class player{
     return this.name;
   }
   public String getTeam(){
-    return this.team
+    return this.team;
   }
   
 }
