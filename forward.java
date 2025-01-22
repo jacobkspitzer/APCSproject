@@ -6,13 +6,13 @@ public class forward extends player{
     pas = p;
     speed = s;
   }
-  public getsho(){
+  public int getsho(){
     return this.sho;
   }
-  public getpas(){
+  public int getpas(){
     return this.pas;
   }
-  public getpac(){
+  public int getpac(){
     return this.speed;
   }
   
