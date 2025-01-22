@@ -1,10 +1,11 @@
-
 import java.util.Scanner;
 import java.util.Random;
 import java.util.*;
 
+
 public class main{
   public static void main(String[] args){
+    
     midfield[] barcamids = new midfield[5];
     forward[] barcafors = new forward[5];
     defender[] barcadefs = new defender[5];
@@ -33,13 +34,13 @@ public class main{
 
     Scanner myscanner = new Scanner(System.in); 
     int barcapossesion = 0;
-    int madridpossesion = 0;
+    int madridpossesion = 514;
 
 
     System.out.println("The year is 2015. You are Luis Enrique, Leading Barca at the height of its power. Only one trophy is still needed to complete a historic treble: the Uefa champions league. Tomorrow, you face your fellow spanish giants, Real Madrid in the final. The rivalry is legendary, and the game will surely be historic. Tonight, you drink coffee and make plans with the coaching staff. Choose your lineup of legendary players, with which you will face the mighty real madrid.%n %n (Hit enter to continue)");
     myscanner.nextLine();
     
-    System.out.println("Assistant Coach: OK boss, lets select our defenders first. Choose a number between 1 and 5 to choose your first defender from the list: " + barcadefs.toString());
+    System.out.println("Assistant Coach: OK boss, lets select our defenders first. Choose a number between 1 and 5 to choose your first defender from the list: " + Arrays.toString(barcadefs));
     int firstdef = myscanner.nextInt();
     barcapossesion += barcadefs[firstdef - 1].getpas();
     barcateam[0] = barcadefs[firstdef - 1];
@@ -49,7 +50,7 @@ public class main{
     barcapossesion += barcadefs[seconddef - 1].getpas();
     barcateam[1] = barcadefs[seconddef - 1];
     
-    System.out.println("Nice, now pick a midfielder from this list: " + barcamids.toString());
+    System.out.println("Nice, now pick a midfielder from this list: " + Arrays.toString(barcamids));
     int firstmid = myscanner.nextInt();
     barcapossesion += barcamids[firstmid - 1].getpas();
     barcateam[2] = barcamids[firstmid - 1];
@@ -59,14 +60,14 @@ public class main{
     barcapossesion += barcamids[secondmid - 1].getpas();
     barcateam[3] = barcamids[secondmid - 1];
     
-    System.out.println("Good picks boss, but now you need an attack. Of course Messi starts, now pick one from this list: " + barcafors.toString());
+    System.out.println("Good picks boss, but now you need an attack. Of course Messi starts, now pick one from this list: " + Arrays.toString(barcafors));
     int firstforward = myscanner.nextInt();
     barcateam[4] = barcafors[firstforward - 1];
     barcapossesion += barcafors[firstforward - 1].getpas();
     barcateam[5] = barcafors[0];
     barcapossesion += barcafors[0].getpas();
     
-    System.out.println("Well done boss. We will field a lineup of " + barcateam.toString() + " against Real tomorrow. I like our chances");
+    System.out.println("Well done boss. We will field a lineup of " + Arrays.toString(barcateam) + " against Real tomorrow. I like our chances");
 
     player[] madridteam = new player[6];
     madridteam[0] = new defender("Pepe", "Madrid", 90, 80, 85);
@@ -75,22 +76,37 @@ public class main{
     madridteam[3] = new midfield("Kroos", "Madrid", 85, 90, 80);
     madridteam[4] = new forward("Ronaldo", "Madrid", 99, 99, 99);
     madridteam[5] = new forward("Bale", "Madrid", 85, 80, 95);
+    try{
+      java.util.concurrent.TimeUnit.SECONDS.sleep(7);
+    }
+    catch (InterruptedException e) {
     
-    Thread.sleep(2000);
-
+     Thread.currentThread().interrupt();
+    }
     int barcascore = 0;
     int madridscore = 0;
 
   
     
     System.out.println("The next day, at the Camp Nou...");
-    Thread.sleep(1000);
-    
+    try{
+      Thread.sleep(1000);
+    }
+    catch (InterruptedException e) {
+
+      Thread.currentThread().interrupt();
+    }
     
 
     System.out.println("Commentator: On a warm night here in Catalonia, the very finest footballers the world has to offer have assembled to play out this edition of the greatest rivalry in sporting history. This is El Clasico, a battle not between two sets of footballers, but a battle between two footballing traditions, between two cities, and between two cultures. The intricate, passing football of barcelona, against the lethal rapid counter attacks of Real Madrid. The home grown talents of Barca, against the Galactico Superstars of Madrid. The humble Messi against the arrogant Ronaldo. The stakes could not be higher tonight. Only time will tell which side will emerge triumphant");
-    Thread.sleep(5000);
-    System.out.println("0': Barcelona kick off and we're underway. They have a spell of early possesion but lose it trying to go long looking for + " + barcateam[5] + " Madrid tries to break quickly with " + madridteam[5] + "but halted in their tracks by" + barcateam[3] + ". Both sides look promising in the opening exchanges, hopefully the match continues like this.");
+    try{
+      Thread.sleep(3000);
+    }
+    catch (InterruptedException e) {
+   
+      Thread.currentThread().interrupt();
+    }
+    System.out.println("0': Barcelona kick off and we're underway. They have a spell of early possesion but lose it trying to go long looking for " + barcateam[5] + " Madrid tries to break quickly with " + madridteam[5] + "but halted in their tracks by" + barcateam[3] + ". Both sides look promising in the opening exchanges, hopefully the match continues like this.");
 
     Random random = new Random();
     
@@ -134,13 +150,18 @@ public class main{
         
         }
       }
-      Thread.sleep(5000);
+      try{
+        Thread.sleep(2000);
+      }
+      catch (InterruptedException e) {
+        Thread.currentThread().interrupt();
+      }
     }
     if (barcascore == madridscore){
       System.out.println("90': Messi drives into the box, one last chance to score here. Ooh it's a nasty challenge from  Ramos and Messi's down holding his leg. Will it be a penalty? IT WILL. Messi steps up to take. Can he complete a treble that will be remembered for decades? HE CAAAAN MESIIIIIIIII HAS DONE IT FOR BARCA, HE ALWAYS DOES, WHAT A MOMENT. Final whistle blows and Barca have their treble");
     }
     if (barcascore> madridscore){
-      System.out.println("90': THE FINAL WHISTLE GOES AND BARCELONA HAVE DONE IT. REAL MADRID BROKEN AND DEFEATED AS BARCA REJOICE. WHAT A NIGHT FOR THE CATALONIANS");
+      System.out.println("90': THE FINAL WHISTLE GOES AND BARCELONA HAVE DONE IT. REAL MADRID BROKEN AND DEFEATED AS BARCA REJOICE. WHAT A NIGHT FOR THE CATALAN SIDE");
     }
     if (madridscore > barcascore){
       System.out.println("90':The final whistle goes, and Madrid have toppled the seemingly unstoppable Barca side. Beaten in preseason. Lost both matches in La Liga. Beaten in the Copa del Rey, BUT VICTORIOUS IN THE CHAMPIONS LEAGUE. WHAT A NIGHT FOR THEM!");
