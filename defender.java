@@ -6,13 +6,13 @@ public class defender extends player{
     pas = p;
     sho = s;
   }
-  public getsho(){
+  public int getsho(){
     return this.sho;
   }
-  public getpas(){
+  public int getpas(){
     return this.pas;
   }
-  public getdef(){
-    return this.getdef;
+  public int getdef(){
+    return this.def;
   }
 }
