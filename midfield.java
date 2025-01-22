@@ -4,15 +4,15 @@ public class midfield extends player{
     super(n, t);
     sho = s;
     pas = p;
-    def = d
+    def = d;
   }
-  public getsho(){
+  public int getsho(){
     return this.sho;
   }
-  public getpas(){
+  public int getpas(){
     return this.pas;
   }
-  public getdef(){
+  public int getdef(){
     return this.def;
   }
   
